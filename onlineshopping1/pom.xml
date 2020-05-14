@@ -16,6 +16,12 @@
 
 
 	<dependencies>
+		<!-- Linked back end project to front end project -->
+		<dependency>
+			<groupId>net.kzn</groupId>
+			<artifactId>shoppingbackend1</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 		<!-- JAVA EE -->
 		<dependency>
