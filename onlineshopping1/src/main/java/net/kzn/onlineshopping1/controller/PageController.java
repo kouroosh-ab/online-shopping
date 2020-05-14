@@ -13,7 +13,30 @@ public class PageController
 	{
 	
 		ModelAndView mv=new ModelAndView("page");
-		mv.addObject("greeting", "welcome to spring mvc");
+		mv.addObject("title", "home");
+		mv.addObject("userClickHome", true);
+		return mv;
+		
+	}
+	/*                                 Request Mapping for about                                              */
+	@RequestMapping(value="/about" )
+	public ModelAndView about() 
+	{
+	
+		ModelAndView mv=new ModelAndView("page");
+		mv.addObject("title", "About Us");
+		mv.addObject("userClickAbout", true);
+		return mv;
+		
+	}
+	/*                                 Request Mapping for contact                                            */
+	@RequestMapping(value="/contact" )
+	public ModelAndView contact() 
+	{
+	
+		ModelAndView mv=new ModelAndView("page");
+		mv.addObject("title", "Contact Us");
+		mv.addObject("userClickContact", true);
 		return mv;
 		
 	}
