@@ -21,6 +21,7 @@
 <title>online shopping -${title }</title>
 <script>
 	window.menu = '${title}';
+	window.contextRoot='${contextRoot}';
 </script>
 
 
@@ -28,6 +29,8 @@
 <link href="${css}/bootstrap.css" rel="stylesheet">
 <!-- Bootstrap readable theme -->
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+<!-- Bootstrap related data table -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 <!-- Add custom CSS here -->
 <link href="${css}/myapp1.css" rel="stylesheet">
@@ -63,7 +66,10 @@
 			<c:if test="${userClickAllProducts==true or userClickCategoryProducts==true}">
 				<%@include file="listproducts.jsp"%>
 			</c:if>
-
+			<!-- Load only user clicks view button -->
+			<c:if test="${userClickShowProduct==true}">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>
 
 		</div>
 		<!-- /.container -->
@@ -75,6 +81,10 @@
 		<!-- JavaScript -->
 		<script src="${js}/jquery.js"></script>
 		<script src="${js}/bootstrap.js"></script>
+		<!-- Data table pluggin -->
+		<script src="${js}/jquery.dataTables.js"></script>
+		<!-- Data table bootstrap script -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
 		<!-- Self coded java script -->
 		<script src="${js}/myapp.js"></script>
 	</div>

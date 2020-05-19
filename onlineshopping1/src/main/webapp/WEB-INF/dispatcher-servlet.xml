@@ -11,10 +11,9 @@
    http://www.springframework.org/schema/mvc/spring-mvc.xsd
    
    ">
-	<context:component-scan
-		base-package="net.kzn.onlineshopping1.controller" />
-		<context:component-scan
-		base-package="net.kzn.shoppingbackend1.daoimpl" />
+	<context:component-scan	base-package="net.kzn.onlineshopping1" />
+	<context:component-scan	base-package="net.kzn.shoppingbackend1" />
+		
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
